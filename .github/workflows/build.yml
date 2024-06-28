@@ -13,5 +13,5 @@ jobs:
     steps:
     - name: Echo
       run: |
-        echo "This is running from the resuable workflow ${{ github.repository }}"
+        echo "This is running from the resuable workflow"
         echo "This was triggered from ${{ inputs.test-input }}"
