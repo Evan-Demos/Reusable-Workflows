@@ -3,7 +3,7 @@ name: Reusable workflow example
 on:
   workflow_call:
     inputs:
-      config-path:
+      test-input:
         required: true
         type: string
 
@@ -14,4 +14,4 @@ jobs:
     - name: Echo
       run: |
         echo "This is running from the resuable workflow"
-        echo "Config path ${{ inputs.config-path }}"
+        echo "Config path ${{ inputs.test-input }}"
