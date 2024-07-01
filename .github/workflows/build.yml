@@ -1,4 +1,4 @@
-name: Reusable workflow example
+name: .NET 8 Build
 
 on:
   workflow_call:
