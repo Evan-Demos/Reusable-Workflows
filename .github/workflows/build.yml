@@ -11,7 +11,28 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - name: Echo
-      run: |
-        echo "This is running from the resuable workflow"
-        echo "This was triggered from ${{ inputs.test-input }}"
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test --no-restore --verbosity normal
+
+    - name: Publish artifact
+      run: dotnet publish -c Release -o ${{ github.workspace }}/publish
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: dotnet-app
+        path: ${{ github.workspace }}/publish
