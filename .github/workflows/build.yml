@@ -13,7 +13,7 @@ jobs:
     steps:
 
     - name: Echo Repo
-      run: echo "Initialised from ${{ event.inputs.test-input }}"
+      run: echo "Initialised from ${{ inputs.test-input }}"
       
     - name: Checkout code
       uses: actions/checkout@v2
