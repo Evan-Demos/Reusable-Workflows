@@ -10,11 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: read
-      statuses: write
-      issues: write
+    permissions: write-all
       
     steps:
 
