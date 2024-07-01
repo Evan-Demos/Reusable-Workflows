@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+    - name: Echo Repo
+      run: echo "Initialised from ${{ event.inputs.test-input }}"
+      
     - name: Checkout code
       uses: actions/checkout@v2
 
