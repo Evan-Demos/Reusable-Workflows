@@ -9,9 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    permissions: write-all
-      
+    runs-on: ubuntu-latest  
     steps:
 
     - name: Echo Repo
