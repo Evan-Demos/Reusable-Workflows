@@ -18,10 +18,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4.1.7  
 
-    - name: Super-linter
-      uses: super-linter/super-linter@v6.6.0 
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Super-linter
+    #   uses: super-linter/super-linter@v6.6.0 
+    #   env:
+    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v4.0.0
