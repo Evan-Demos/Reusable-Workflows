@@ -21,6 +21,9 @@ jobs:
         name: dotnet-app
         path: ${{ github.workspace }}/publish
 
+    - name: LS
+      run: ls -a
+
     # - name: Deploy to Azure Web App
     #   uses: azure/webapps-deploy@v2
     #   with:
