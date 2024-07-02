@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: ${{ input.env }}
+    environment: ${{ inputs.env }}
     steps:
     - name: Checkout code
       uses: actions/setup-dotnet@v4.0.0
