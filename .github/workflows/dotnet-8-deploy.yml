@@ -2,10 +2,15 @@ name: .NET 8 Deploy
 
 on:
   workflow_call:
+    inputs: 
+      env: 
+        required: true
+        type: string
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ input.env }}
     steps:
     - name: Checkout code
       uses: actions/setup-dotnet@v4.0.0
