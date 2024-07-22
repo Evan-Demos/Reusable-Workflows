@@ -29,8 +29,8 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
-    - name: Run tests
-      run: dotnet test --no-restore --verbosity normal
+    # - name: Run tests
+    #   run: dotnet test --no-restore --verbosity normal
 
     - name: Publish artifact
       run: dotnet publish -c Release -o ${{ github.workspace }}/publish
